@@ -1,0 +1,32 @@
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
+
+# enable support for colors
+autoload colors && colors
+
+# source every .zsh file in this rep
+for config_file ($ZSH/**/*.zsh) source $config_file
+
+# load functions
+#fpath=($ZSH/zsh/functions $fpath)
+#autoload -U $ZSH/zsh/functions/*(:t)
+
+zle -N newtab
+
+# initialize autocomplete here, otherwise functions won't be loaded
+autoload -U compinit
+compinit -u
+
+# load every completion after autocomplete loads
+for config_file ($ZSH/**/completion.sh) source $config_file
+
+# autojump
+#if [ -f `brew --prefix`/etc/autojump ]; then
+#  . `brew --prefix`/etc/autojump
+#fi
+
+# GRC colorizes nifty unix tools all over the place
+if $(grc &>/dev/null)
+then
+  source `brew --prefix`/etc/grc.bashrc
+fi
