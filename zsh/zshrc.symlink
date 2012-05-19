@@ -1,6 +1,9 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/dotfiles
 
+#this fixes an issue where backspace doesn't work on ubuntu systems
+export TERM=xterm
+
 # enable support for colors
 autoload colors && colors
 
