@@ -1,5 +1,6 @@
 set number
 :colorscheme slate
+syntax on
 set ft=vim
 set syn=vim
 set nohls	hls
