@@ -6,10 +6,6 @@ export LS_COLORS='no=00;38;5;244:rs=0:di=00;38;5;33:ln=01;38;5;37:mh=00:pi=48;5;
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
 export SAVEHIST=1000000
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-export PB_HOME=/cre/pep
-export MVN_HOME="$PB_HOME/maven"
-export MULE_HOME="$PB_HOME/mule"
 #export GRAILS_HOME=/usr/lib/grails-2.0.0
 #export MAGICK_HOME=/usr/lib/ImageMagick
 #export NODE_PATH="/usr/local/lib/node"
